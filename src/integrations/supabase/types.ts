@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      movies: {
+        Row: {
+          availability_status: string
+          created_at: string
+          description: string | null
+          genre: string
+          id: string
+          release_year: number
+          rental_price: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          availability_status?: string
+          created_at?: string
+          description?: string | null
+          genre: string
+          id?: string
+          release_year: number
+          rental_price: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          availability_status?: string
+          created_at?: string
+          description?: string | null
+          genre?: string
+          id?: string
+          release_year?: number
+          rental_price?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
